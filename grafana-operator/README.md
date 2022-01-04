@@ -219,7 +219,7 @@ For more information, refer to the [documentation on the differences between the
 | `grafana.ingress.tlsSecret`                                 | The name for the secret to use for the tls termination                                        | `grafana.local-tls`   |
 | `grafana.persistence.enabled`                               | Enable persistent storage for the grafana deployment                                          | `false`               |
 | `grafana.persistence.storageClass`                          | Define the storageClass for the persistent storage if not defined default is used             | `""`                  |
-| `grafana.persistence.accessModes`                           | Define the accessModes for the persistent storage                                             | `ReadWriteOnce`       |
+| `grafana.persistence.accessModes`                           | Define the accessModes for the persistent storage                                             | `[ReadWriteOnce]`       |
 | `grafana.persistence.annotations`                           | Add annotations to the persistent volume                                                      | `{}`                  |
 | `grafana.persistence.size`                                  | Define the size of the PersistentVolumeClaim to request for                                   | `10Gi`                |
 | `grafana.config`                                            | grafana.ini configuration for the instance for this to configure please look at upstream docs | `{}`                  |
@@ -334,3 +334,19 @@ grafanaPluginInit:
 ```
 
 See [PR#7114](https://github.com/bitnami/charts/pull/7114) for more info about the implemented changes
+
+## License
+
+Copyright &copy; 2022 Bitnami
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
